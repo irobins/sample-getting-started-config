@@ -1,0 +1,15 @@
+version: 1.0
+app:
+  instances: 1
+  version: 1.0-SNAPSHOT-20230614125926
+  env:
+    - name: JVM_ARGS
+      value: "-DenvironmentType=stage"
+    - name: io_openliberty_sample_system_inMaintenance
+      value: "false"
+  mounts:
+    - path: /opt/ol/wlp/usr/servers/defaultServer/configDropins/overrides/myconfig.xml
+      value: |
+        <server>
+            <var name="io_openliberty_sample_system_inMaintenance" value="false"/>
+        </server>
