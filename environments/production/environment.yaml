@@ -1,9 +1,11 @@
 version: 1.0
 app:
-  instances: 1
-  version: 500723ca-6e7c-46cd-9876-6eb46c5f0054
+  instances: 
+    min: 1
+    max: 1
+  version: 0671904e-66b2-4186-a597-d2379b7e6283
   env:
     - name: JVM_ARGS
       value: "-DenvironmentType=prod"
     - name: MAX
-      value: 5
+      value: "5"
