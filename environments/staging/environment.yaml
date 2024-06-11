@@ -1,4 +1,4 @@
-vversion: 1.0
+version: 1.0
 app:
   instances:
     min: 1
